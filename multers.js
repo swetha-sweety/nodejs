@@ -75,7 +75,7 @@ app.post('/postdata',upload.single('filename'),(req,res)=>{
     app.get('/getdata',  (req,res)=>{
 
 
-        let query =  "select *from  fileupload " 
+    let query =  "select * from  fileupload " 
      mysqlConnection.query(query,function(err,data)
      {
      if(!err)
