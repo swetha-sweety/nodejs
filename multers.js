@@ -55,7 +55,7 @@ const upload=multer({
 app.post('/postdata',upload.single('filename'),(req,res)=>{
 
     console.log("incoming values",req.body.filename)
-   // let query=  "insert into fileupload (filename) values ('"+req.file.filename+"')" 
+  
   let query=  "insert into fileupload (filename) values ('"+`http://localhost:4000/profile/${req.file.filename}`+"')" 
 
 
